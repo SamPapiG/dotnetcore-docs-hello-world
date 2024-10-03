@@ -22,37 +22,55 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <div class="jumbotron">
-        <h1>Four more years of Biden 💜</h1>
-        <p class="lead">Example .NET app to Azure App Service.</p>
-        <button type='button' name='myButton' onclick='myFunction()' aria-label='Click me button'>
-            Click me!
-        </button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+    <div class="text-center">
+        <div class="jumbotron">
+            <header>
+                <h1>Four more years of Biden 💜</h1>
+            </header>
+            <main>
+                <p class="lead">Example .NET app to Azure App Service.</p>
+                <button type='button' name='myButton' onclick='myFunction()' aria-label='Click me button'>
+                    Click me!
+                </button>
+            </main>
+        </div>
     </div>
-</div>
 
-<script>
-    function myFunction() {
-        alert('Button clicked!');
-    }
-</script>
+    <script>
+        function myFunction() {
+            document.querySelector('.lead').innerText = 'Button was clicked!';
+        }
+    </script>
 
-<style>
-    .jumbotron {
-        background-color: #f8f9fa;
-        padding: 2rem;
-        border-radius: 0.3rem;
-    }
-    button {
-        background-color: #007bff;
-        color: white;
-        border: none;
-        padding: 0.5rem 1rem;
-        border-radius: 0.3rem;
-        cursor: pointer;
-    }
-    button:hover {
-        background-color: #0056b3;
-    }
-</style>
+    <style>
+        .jumbotron {
+            background-color: #e9ecef;
+            padding: 2rem;
+            border-radius: 0.3rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.3rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</body>
+</html>
+
